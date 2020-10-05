@@ -1,6 +1,6 @@
-# Multi-touch-attribution-models
+### Multi-touch-attribution-models
 
-1. Introduction 
+# 1. Introduction 
 
 Four methods are displayed in this projects: 
 - Heuristic models: First Touch Attribution (FTA), Last Touch Attribution (LTA), Linear Touch Attribution (LINEAR)
