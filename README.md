@@ -2,9 +2,9 @@
 
 ## METHODOLOGY 
 ### 1. Heuristic models: 
- - First Touch Attribution (FTA)
- - Last Touch Attribution (LTA)
- - Linear Touch Attribution (LINEAR)
+ - First Touch Attribution (FTA): 
+ - Last Touch Attribution (LTA): 
+ - Linear Touch Attribution (LINEAR): 
 ### 2. Markov Chain models: 
 - First Order 
 - Higher Order
