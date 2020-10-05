@@ -1,4 +1,4 @@
-# Multi-touch-attribution-models
+# Multi-touch Attribution Models
 
 ### METHODOLOGY 
 
