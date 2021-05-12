@@ -55,9 +55,12 @@ Like any other regression methods, Logistic regression also has the issue of ove
 ### 4.1 First Order model
 First Order model only considers the current state and ignores the sequence of the states preceding it. This property is called the Markov property or the memoryless property. 
 
+![markov1](https://user-images.githubusercontent.com/66676705/117965226-cfb5f300-b322-11eb-8ad6-6d2f277bdbaa.PNG)
 
 ### 4.2 Higher Order models
-Higher Order models also consider previous states of the sequence. The number of the previous states depends on the Order. For example, Second Order model would look back 2 steps in the sequence to calculate the probability of moving to the next state. 
+Higher Order models also consider previous states of the sequence. 
 
+![markov2](https://user-images.githubusercontent.com/66676705/117965231-cfb5f300-b322-11eb-944d-ec942e473406.PNG)
 
+The number of the previous states depends on the Order. For example, Second Order model would look back 2 steps in the sequence to calculate the probability of moving to the next state.
 ## DATA SIMULATION
