@@ -21,8 +21,7 @@
 - Assigns credits among players according to their contribution to a game.
 - The Shapley Value of channel i in a sub-game g is \phi<sub>𝑖</sub>(g). 
 - The attribution of channel 𝑖 in a multi-channel game 𝐺: 
-![image](https://user-images.githubusercontent.com/66676705/117966877-b6ae4180-b324-11eb-8552-e71d3cbc54de.png)
-
+![logistic-formula-adj](https://user-images.githubusercontent.com/66676705/117967286-27555e00-b325-11eb-90ba-c6b9129f3184.PNG)
 <!--Introduced by Shapley (1953), Shapley Value is a credit assignment method in Cooperative Game Theory which allocates payoffs among players based on their contribution to a game. Within a game, the players can cooperate in various combinations to gain rewards. Therefore, the credit of one player is computed based on the expected value of their marginal contribution to the total result of every possible cooperation with other members. In the case of multi-channel attribution, channels are regarded as players in a cooperative game since they work together to attract users and in uence their behaviours. This section will first apply the original Shapley Value approach and later show how it can be applied in the case of channel attribution.--> 
 
 <!-- ### 2.1 The original model --> 
