@@ -1,5 +1,40 @@
 # Multi-touch Attribution Models
 
+
+## DATA SIMULATION
+**Session data** 
+- Visitor ID (or FullVisitorID as in Google Analytics) is assigned to each new user when they arrive at the website for the first time.
+- Visit Start Time is the date and time that a user visits the website  
+- NAW (the abbreviation for Naam-Adres-Woonplaats which is Name-Address-City in English) is a high-involvement conversion
+- SOFT is a low-involvement conversion
+- Channel Group is one of the following:  
+> * Organic Search (OS): A visitor search for general keywords in a search engine and clicks on the webpage with no Ad sign. This webpage is ranked based on the relevance of the keywords.
+> 
+> * Branded Paid Search (BPS): A visitor search for brand-relevant keywords in a search engine and clicks on the webpage with the Ad sign.
+>  
+> * Generic Paid Search (GPS): A visitor search for general keywords in a search engine and clicks the on the webpage with the Ad sign.  
+> 
+> * Direct: When a visitor accesses the website by typing the website address in the web browser, or by bookmarking the website.
+> 
+> * Display: By clicking banner advertisements on external websites, a visitor arrives at the advertiser's website
+> 
+> * Emai: A visitor reaches the website by clicking an email sent to them since they agree to receive emails like newsletters from the advertiser.
+>  
+> * Social: When a visitor comes from social media platforms which are employed by the advertiser to attract users from the platforms like Facebook, Twitter.
+>  
+> * Referral:Clicks from external websites like pricecomparing websites.
+>  
+> * Other: Other marketing forms that don't belong to the above types.
+
+**Journey data**
+- Visitor ID 
+- Path number 
+- Conversion (NAW / SOFT / TOTAL) 
+- Journey  
+
+**Here is an example of how session data can be translated to journey data**
+
+
 ## METHODOLOGY 
 ### 1. Heuristic models
  - **First Touch Attribution (FTA)** appoints all the credits of a conversion to the first channel of a customer journey.
@@ -52,12 +87,3 @@ There are some properties that the Shapley Value method needs to satisfy:
 NAW: high-involvement conversion level
 SOFT: low-involvement conversion level
 TOTAL: combination of both conversion levels
-
-## DATA SIMULATION
-**Session data** 
-- Visitor ID 
-- Visit Start Time 
-- NAW
-- SOFT
-- TOTAL 
-- Channel Group 
