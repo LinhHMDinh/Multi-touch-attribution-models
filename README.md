@@ -53,3 +53,10 @@ SOFT: low-involvement conversion level
 TOTAL: combination of both conversion levels
 
 ## DATA SIMULATION
+**Session data** 
+- Visitor ID 
+- Visit Start Time 
+- NAW
+- SOFT
+- TOTAL 
+- Channel Group 
