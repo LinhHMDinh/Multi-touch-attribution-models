@@ -11,6 +11,7 @@
 <!-- ![Single-touch](https://user-images.githubusercontent.com/66676705/117957951-d476a900-b31a-11eb-89fe-f75db352a628.PNG) -->
 
  - **Linear Touch Attribution (LINEAR)** gives equal weight(s) to all channel(s) in a customer journey that results in conversion.
+ - 
 ![linear](https://user-images.githubusercontent.com/66676705/117965625-49e67780-b323-11eb-98f8-90f1654c62a6.PNG)
  
 <!--![Multiple-touch](https://user-images.githubusercontent.com/66676705/117957947-d3de1280-b31a-11eb-8a51-263ae386fe97.PNG) -->
