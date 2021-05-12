@@ -1,6 +1,5 @@
 # Multi-touch Attribution Models
 
-
 ## DATA SIMULATION
 **Session data** 
 - Visitor ID (or FullVisitorID as in Google Analytics) is assigned to each new user when they arrive at the website for the first time.
@@ -9,31 +8,36 @@
 - SOFT is a low-involvement conversion
 - Channel Group is one of the following:  
 > * Organic Search (OS): A visitor search for general keywords in a search engine and clicks on the webpage with no Ad sign. This webpage is ranked based on the relevance of the keywords.
-> 
 > * Branded Paid Search (BPS): A visitor search for brand-relevant keywords in a search engine and clicks on the webpage with the Ad sign.
->  
 > * Generic Paid Search (GPS): A visitor search for general keywords in a search engine and clicks the on the webpage with the Ad sign.  
-> 
-> * Direct: When a visitor accesses the website by typing the website address in the web browser, or by bookmarking the website.
-> 
+> * Direct: A visitor accesses the website by typing the website address in the web browser, or by bookmarking the website.
 > * Display: By clicking banner advertisements on external websites, a visitor arrives at the advertiser's website
-> 
 > * Emai: A visitor reaches the website by clicking an email sent to them since they agree to receive emails like newsletters from the advertiser.
->  
-> * Social: When a visitor comes from social media platforms which are employed by the advertiser to attract users from the platforms like Facebook, Twitter.
->  
-> * Referral:Clicks from external websites like pricecomparing websites.
->  
+> * Social: A visitor comes from social media platforms which are employed by the advertiser to attract users from the platforms like Facebook, Twitter.
+> * Referral: A visitor clicks from external websites like price comparing websites.
 > * Other: Other marketing forms that don't belong to the above types.
 
-**Journey data**
+
+**Journey data**: which each journey reflects all the touch-points that a user comes by before reaching any conversion or a non-conversion
 - Visitor ID 
-- Path number 
-- Conversion (NAW / SOFT / TOTAL) 
-- Journey  
+- Conversion:
+> * NAW: only high-involvement conversions
+> * SOFT: only low-involvement conversions
+> * TOTAL: both low- and high-involvement conversions
+- Journey: all the touch-points in the journey are presented in chronological order. If the time between 2 touch-points pass the threshold of 30 days or any conversion is reached during one session, a new journey will be created.     
 
 **Here is an example of how session data can be translated to journey data**
+Session data: 
+![session data](https://user-images.githubusercontent.com/66676705/117973830-245e6b80-b32d-11eb-93b2-dab9964dd89f.PNG)
 
+Journey data with NAW conversion:
+![naw - path](https://user-images.githubusercontent.com/66676705/117973806-1c9ec700-b32d-11eb-807e-b60912f5c7b5.PNG)
+
+Journey data with NAW conversion:
+![soft - path](https://user-images.githubusercontent.com/66676705/117973807-1d375d80-b32d-11eb-925f-421b2bde8df9.PNG)
+
+Journey data with TOTAL conversion:
+![total - path](https://user-images.githubusercontent.com/66676705/117973810-1dcff400-b32d-11eb-8b66-18ab4b2dad1f.PNG)
 
 ## METHODOLOGY 
 ### 1. Heuristic models
