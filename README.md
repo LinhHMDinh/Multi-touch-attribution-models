@@ -4,31 +4,38 @@
 ### 1. Heuristic models
 ### 1.1 Single-touch attribution 
  - **First Touch Attribution (FTA)** appoints all the credits of a conversion to the first channel of a customer journey.
- - **Last Touch Attribution (LTA)** is similar to FTA but appoints the credits to the last channel.
+![fta](https://user-images.githubusercontent.com/66676705/117965630-4a7f0e00-b323-11eb-9cdb-35d165e143bc.PNG)
 
-![Single-touch](https://user-images.githubusercontent.com/66676705/117957951-d476a900-b31a-11eb-89fe-f75db352a628.PNG)
+ - **Last Touch Attribution (LTA)** is similar to FTA but appoints the credits to the last channel.
+![lta](https://user-images.githubusercontent.com/66676705/117965629-4a7f0e00-b323-11eb-8230-9d3a163c9a02.PNG)
+
+<!-- ![Single-touch](https://user-images.githubusercontent.com/66676705/117957951-d476a900-b31a-11eb-89fe-f75db352a628.PNG) -->
 
 ### 1.2 Multiple-touch attribution
  - **Linear Touch Attribution (LINEAR)** gives equal weight(s) to all channel(s) in a customer journey that results in conversion.
-
-![Multiple-touch](https://user-images.githubusercontent.com/66676705/117957947-d3de1280-b31a-11eb-8a51-263ae386fe97.PNG)
+![linear](https://user-images.githubusercontent.com/66676705/117965625-49e67780-b323-11eb-98f8-90f1654c62a6.PNG)
+ 
+<!--![Multiple-touch](https://user-images.githubusercontent.com/66676705/117957947-d3de1280-b31a-11eb-8a51-263ae386fe97.PNG) -->
 
 ### 2. Shapley Value method 
-Introduced by Shapley (1953), Shapley Value is a credit assignment method in Cooperative Game Theory which allocates payoffs among players based on their contribution to a game. Within a game, the players can cooperate in various combinations to gain rewards. Therefore, the credit of one player is computed based on the expected value of their marginal contribution to the total result of every possible cooperation with other members. In the case of multi-channel attribution, channels are regarded as players in a cooperative game since they work together to attract users and in uence their behaviours. This section will first apply the original Shapley Value approach and later show how it can be applied in the case of channel attribution.
+- Assigns credits among players according to their contribution to a game.
+- The Shapley Value of channel i in a sub-game g is \phi<sub>𝑖</sub>(g). 
+- The attribution of channel 𝑖 in a multi-channel game 𝐺: 
+![image](https://user-images.githubusercontent.com/66676705/117966877-b6ae4180-b324-11eb-8552-e71d3cbc54de.png)
+
+<!--Introduced by Shapley (1953), Shapley Value is a credit assignment method in Cooperative Game Theory which allocates payoffs among players based on their contribution to a game. Within a game, the players can cooperate in various combinations to gain rewards. Therefore, the credit of one player is computed based on the expected value of their marginal contribution to the total result of every possible cooperation with other members. In the case of multi-channel attribution, channels are regarded as players in a cooperative game since they work together to attract users and in uence their behaviours. This section will first apply the original Shapley Value approach and later show how it can be applied in the case of channel attribution.--> 
 
 <!-- ### 2.1 The original model --> 
 <!-- (Assume that there are k players in a game and let S be a subset of players or a coalition. The dummy variable x<sub>i</sub> takes value 1 if player i is a member of S and 0 otherwise. The members of S cooperate and create a total amount of payoffs v(S), which is called the utility function of S. The value of v(S) depends only on the presence of the players in S and not on the order of the players entering the coalition. The grand coalition K contains all k players and v(K) is the total expected value that they all can create together. Given a cooperative game G = (v, K), the formula of the Shapley Value of player i is as below:) -->
 
 <!--![shapley-orginal](https://user-images.githubusercontent.com/66676705/117959638-84004b00-b31c-11eb-86ca-8f8d5db7955a.PNG)  -->
 
-<!-- where |K| and |S| are the cardinality of the grand coalition K and coalition S. Thus, |K|! and |S|! are the number of all possible permutations of members in K and S respectively, and (|K| - |S| - 1)! is the number of combinations of all players not in S and i. v(S \cup {(x_<sub>i</sub> = 1}) - v(S), named as M(i, S), is the marginal contribution of player i to coalition S. The formula 3.1 shows that Shapley Value \phi<sub>i</sub>(G) is calculated as the weighted average of M(i; S) over all possible coalitions S for each player i.) -->
+<!-- where |K| and |S| are the cardinality of the grand coalition K and coalition S. Thus, |K|! and |S|! are the number of all possible permutations of members in K and S respectively, and (|K| - |S| - 1)! is the number of combinations of all players not in S and i. v(S \cup {(x<sub>i</sub> = 1}) - v(S), named as M(i, S), is the marginal contribution of player i to coalition S. The formula 3.1 shows that Shapley Value \phi<sub>i</sub>(G) is calculated as the weighted average of M(i; S) over all possible coalitions S for each player i.) -->
 
 There are some properties that the Shapley Value method needs to satisfy:
 - Efficiency: The Shapley values of all players sum up to the value of the grand coalition so that the total value of the game is distributed among the players.
 - Symmetry: This guarantees that players with the same contribution to every coalition should receive equal credits. 
 - Dummy Player: A player that does not contribute to any coalition should receive no payoff.
-
-These properties ensure that all players receive their "fair" share of credits for their contribution to the game, and thus it is relatively easy to interpret the results of the model. However, the Shapley Value method has some disadvantages. Firstly, it ignores repeating players and only counts them once, which means that the number of occurrence of the players is irrelevant to the result. Secondly, it does not include the order information, implying that different orders of a coalition yield the same payoff. For instance, it does not matter if player A is followed by B and then C or by C and then B. Thirdly, the method depends on all the different combinations of the players. Therefore, the number of possible coalitions increase exponentially as the number of players increases, making the running time longer as well.
 
 <!-- ### 2.2 The adjusted model --> 
 
