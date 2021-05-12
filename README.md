@@ -40,4 +40,9 @@ There are some properties that the Shapley Value method needs to satisfy:
 
 ![markov2](https://user-images.githubusercontent.com/66676705/117965231-cfb5f300-b322-11eb-944d-ec942e473406.PNG)
 
+### 5. Model comparison
+
+
+### 6. Model evaluation
+
 ## DATA SIMULATION
