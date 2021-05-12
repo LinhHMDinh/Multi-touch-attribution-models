@@ -42,7 +42,14 @@ There are some properties that the Shapley Value method needs to satisfy:
 
 ### 5. Model comparison
 
+![Model comparison](https://user-images.githubusercontent.com/66676705/117968981-1ad20500-b327-11eb-86cd-9ae62c56a6b2.PNG)
 
 ### 6. Model evaluation
+- **Predictive Accuracy**: The area under the curve (AUC) when each model predicts the conversion event of journeys.
+- **Robustness**: The coefficient of variation of AUC per channel: 𝐶𝑉<sub>𝐴𝑈𝐶</sub>=𝜎<sub>𝐴𝑈𝐶</sub>/𝜇<sub>𝐴𝑈𝐶</sub>. Then calculate the average coefficient of variation of channel attribution over all channels 
+- Different settings of online conversions:
+NAW: high-involvement conversion level
+SOFT: low-involvement conversion level
+TOTAL: combination of both conversion levels
 
 ## DATA SIMULATION
