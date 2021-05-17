@@ -1,7 +1,12 @@
 # Multi-touch Attribution Models
+**Disclaimer: This work is based on the master thesis of the author, Linh Dinh. Due to confidentiality reasons, the author cannot disclose the real dataset that the thesis is based on. Therefore, a simulated dataset is provided to see how the models work and perform.**
+
+## INTRODUCTION
+Marketers can reach potential customers through many online  channels  like  paid  search,  display,  email,  referral  websites  and  social  media.   At the  same  time, customers  increasingly  use  these  channels  to  gather  information  before making a purchase or subscribing to a service. Therefore, a customer can make multiple touch-points to assist their decision.  A touch-point is an online contact, initiated eitherby a customer or by a company, that affects a customer’s opinions about a product or a service.  All the touch-points that a user makes before reaching their decision constitute a customer journey. To  optimally  distribute  the online marketing  budget  among  all  the  touch-points, companies need to know how much each channel truly contributes to the sales.  Although some channels do not cost money, and some cannot be controlled by the companies, they can benefit from the knowledge of channel performance to design marketing strategies and campaigns which maximize their returns. 
 
 ## DATA SIMULATION
-**Session data** 
+### 1. Session data
+Session data consists of the following columns: 
 - Visitor ID (or FullVisitorID as in Google Analytics) is assigned to each new user when they arrive at the website for the first time.
 - Visit Start Time is the date and time that a user visits the website  
 - NAW (the abbreviation for Naam-Adres-Woonplaats which is Name-Address-City in English) is a high-involvement conversion
@@ -18,7 +23,9 @@
 > * Other: Other marketing forms that don't belong to the above types.
 
 
-**Journey data**: which each journey reflects all the touch-points that a user comes by before reaching any conversion or a non-conversion
+### 2. Journey data: 
+Journey data includes customer journeys that reflect all the touch-points that a user comes by before reaching any conversion or a non-conversion.
+The dataset consists of the following columns: 
 - Visitor ID 
 - Conversion:
 > * NAW: only high-involvement conversions
@@ -26,18 +33,18 @@
 > * TOTAL: both low- and high-involvement conversions
 - Journey: all the touch-points in the journey are presented in chronological order. If the time between 2 touch-points pass the threshold of 30 days or any conversion is reached during one session, a new journey will be created.     
 
-**Here is an example of how session data can be translated to journey data**
-Session data: 
-![session data](https://user-images.githubusercontent.com/66676705/117973830-245e6b80-b32d-11eb-93b2-dab9964dd89f.PNG)
+<!--**Here is an example of how session data can be translated to journey data** -->
+<!--Session data: -->
+<!--![session data](https://user-images.githubusercontent.com/66676705/117973830-245e6b80-b32d-11eb-93b2-dab9964dd89f.PNG) -->
 
-Journey data with NAW conversion:
-![naw - path](https://user-images.githubusercontent.com/66676705/117973806-1c9ec700-b32d-11eb-807e-b60912f5c7b5.PNG)
+<!--Journey data with NAW conversion: -->
+<!--![naw - path](https://user-images.githubusercontent.com/66676705/117973806-1c9ec700-b32d-11eb-807e-b60912f5c7b5.PNG) -->
 
-Journey data with NAW conversion:
-![soft - path](https://user-images.githubusercontent.com/66676705/117973807-1d375d80-b32d-11eb-925f-421b2bde8df9.PNG)
+<!--Journey data with NAW conversion: -->
+<!--![soft - path](https://user-images.githubusercontent.com/66676705/117973807-1d375d80-b32d-11eb-925f-421b2bde8df9.PNG) -->
 
-Journey data with TOTAL conversion:
-![total - path](https://user-images.githubusercontent.com/66676705/117973810-1dcff400-b32d-11eb-8b66-18ab4b2dad1f.PNG)
+<!--Journey data with TOTAL conversion: -->
+<!--![total - path](https://user-images.githubusercontent.com/66676705/117973810-1dcff400-b32d-11eb-8b66-18ab4b2dad1f.PNG) -->
 
 ## METHODOLOGY 
 ### 1. Heuristic models
@@ -50,7 +57,6 @@ Journey data with TOTAL conversion:
 <!-- ![Single-touch](https://user-images.githubusercontent.com/66676705/117957951-d476a900-b31a-11eb-89fe-f75db352a628.PNG) -->
 
  - **Linear Touch Attribution (LINEAR)** gives equal weight(s) to all channel(s) in a customer journey that results in conversion.
- - 
 ![linear](https://user-images.githubusercontent.com/66676705/117965625-49e67780-b323-11eb-98f8-90f1654c62a6.PNG)
  
 <!--![Multiple-touch](https://user-images.githubusercontent.com/66676705/117957947-d3de1280-b31a-11eb-8a51-263ae386fe97.PNG) -->
@@ -91,3 +97,6 @@ There are some properties that the Shapley Value method needs to satisfy:
 NAW: high-involvement conversion level
 SOFT: low-involvement conversion level
 TOTAL: combination of both conversion levels
+
+
+## ANALYSIS AND RESULTS
